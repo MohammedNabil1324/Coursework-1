@@ -19,6 +19,7 @@
       </header>
       <main id="lessons" v-for="lessons in lessons">
         <h2>{{lessons.subject}}</h2>
+        <span id="icon"><i :class="lessons.icon"></i></span>
         <p>Location:{{lessons.location}}</p>
         <p>Price:£{{lessons.price}}</p>
         <p>Space:{{lessons.space}}</p>

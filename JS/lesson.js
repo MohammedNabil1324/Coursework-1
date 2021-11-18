@@ -19,7 +19,7 @@ let app = new Vue({
         price: 55,
         space: 5,
         image: "Assets/Math.jpeg",
-        icon: "",
+        icon: "fas fa-plus",
       },
 
       {
@@ -29,7 +29,7 @@ let app = new Vue({
         price: 45,
         space: 5,
         image: "Assets/Bio.jpg",
-        icon: "",
+        icon: "fas fa-seedling",
       },
 
       {
@@ -39,7 +39,7 @@ let app = new Vue({
         price: 65,
         space: 5,
         image: "Assets/Phy.jpg",
-        icon: "",
+        icon: "fas fa-atom",
       },
 
       {
@@ -49,7 +49,7 @@ let app = new Vue({
         price: 85,
         space: 5,
         image: "Assets/Chem.jpg",
-        icon: "",
+        icon: "fas fa-flask",
       },
 
       {
@@ -59,7 +59,7 @@ let app = new Vue({
         price: 95,
         space: 5,
         image: "Assets/CompSc.jpg",
-        icon: "",
+        icon: "fas fa-mouse-pointer",
       },
 
       {
@@ -69,7 +69,7 @@ let app = new Vue({
         price: 75,
         space: 5,
         image: "Assets/Business.jpg",
-        icon: "",
+        icon: "fas fa-briefcase",
       },
 
       {
@@ -79,7 +79,7 @@ let app = new Vue({
         price: 60,
         space: 5,
         image: "Assets/Accounting.jpg",
-        icon: "",
+        icon: "fas fa-calculator",
       },
 
       {
@@ -89,7 +89,7 @@ let app = new Vue({
         price: 80,
         space: 5,
         image: "Assets/Eco.jpg",
-        icon: "",
+        icon: "fas fa-money-bill-wave",
       },
 
       {
@@ -99,7 +99,7 @@ let app = new Vue({
         price: 50,
         space: 5,
         image: "Assets/Psy.jpg",
-        icon: "",
+        icon: "fas fa-brain",
       },
     ],
   },
