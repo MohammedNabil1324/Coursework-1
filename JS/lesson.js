@@ -6,81 +6,101 @@ let app = new Vue({
       {
         id: 01,
         subject: "English",
-        location: London,
-        price: 1500,
+        location: "London",
+        price: 50,
         space: 5,
+        image:"",
+        icon:""
       },
 
       {
         id: 02,
-        subject: "",
+        subject: "Math",
         location:"York",
-        price: 1500,
+        price: 55,
         space: 5,
+        image:"",
+        icon:""
       },
 
       {
         id: 03,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Biology",
+        location: "Bristol",
+        price: 45,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 04,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Physics",
+        location: "York",
+        price: 65,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 05,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Chemistry",
+        location: "Manchester",
+        price: 85,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 06,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Computer Science",
+        location: "Birmingham",
+        price: 95,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 07,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Business",
+        location: "London",
+        price: 75,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 08,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Accountancy",
+        location: "Birmingham",
+        price: 60,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 09,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Economics",
+        location: "Manchester",
+        price: 80,
         space: 5,
+        image:"",
+        icon:""
       },
       
       {
         id: 10,
-        subject: "",
-        location: "",
-        price: 1500,
+        subject: "Psychology",
+        location: "Liverpool",
+        price: 50,
         space: 5,
+        image:"",
+        icon:""
       },
 
     ],
