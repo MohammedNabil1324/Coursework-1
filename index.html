@@ -42,13 +42,20 @@
         <span id="icon"><i :class="lessons.icon"></i></span>
         <p>Location:{{lessons.location}}</p>
         <p>Price:£{{lessons.price}}</p>
-        <p :id="lessons.id">Space:{{lessons.space}}</p>
+        <p >Space:{{lessons.space}}</p>
         <img id="img" v-bind:src="lessons.image" /><br />
-        <button :id="lessons.id-1" @click="addLesson">Add to Cart</button>
+        <button :id="lessons.id-1" @click="addLesson" :disabled='lessons.space==0'>Add to Cart</button>
         <div></div>
       </div>
       <div v-else>
-
+        <h2>Checkout</h2>
+        <form>
+          <label>Name:</label> 
+          <input type="text"><br>
+          <label>Phone Number:</label> 
+          <input type="text">
+          <input type="button" text="Checkout">
+        </form>
       </div>
       </main>
     </div>
@@ -60,16 +67,21 @@
           lessons: app.lessons,
           cart: [],
           showProduct: true,
+          disabled: false,
         },
         methods: {
           addLesson: function (e) {
             this.cart.push(app.lessons[e.target.id].id);
-            this.lessons.space = this.lessons[e.target.id].space - 1;
-            element.innerHTML
+            this.lessons[e.target.id].space = this.lessons[e.target.id].space - 1;
+            if (this.lessons[e.target.id].space==0) {
+              disabled=true;
+            }
           },
 
           showCheckout: function() { 
-            this.showProduct = this.showProduct ? false : true },
+            this.showProduct = this.showProduct ? false : true 
+          },
+
         },
         computed: {
           cartCount: function () {
