@@ -51,10 +51,10 @@
         <h2>Checkout</h2>
         <form>
           <label>Name:</label> 
-          <input type="text"><br>
+          <input type="text" v-model="detail" type="text" required pattern="/^[a-z ,.'-]+$/i"><br>
           <label>Phone Number:</label> 
-          <input type="text">
-          <input type="button" text="Checkout">
+          <input type="text" v-model="detail1" type="number" required pattern="/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/"><br>
+          <button :disabled="detail && detail1 === ''" @click="submitForm">Checkout</button>
         </form>
       </div>
       </main>
@@ -68,6 +68,8 @@
           cart: [],
           showProduct: true,
           disabled: false,
+          detail:"",
+          detail1:"",
         },
         methods: {
           addLesson: function (e) {
@@ -80,6 +82,10 @@
 
           showCheckout: function() { 
             this.showProduct = this.showProduct ? false : true 
+          },
+
+          submitForm: function(){
+            alert("Lessons Booked")
           },
 
         },
