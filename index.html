@@ -16,7 +16,20 @@
     <div id="app">
       <header>
         <h1>{{sitename}}</h1>
+        <button id="cart"><i class="fas fa-shopping-cart"></i> Cart</button> <br>
       </header>
+      <select>
+        <option disabled value="">Sort</option>
+        <option value="Subject">Subject</option>
+        <option value="Location">Location</option>
+        <option value="Price">Price</option>
+        <option value="Availability">Availability</option>
+      </select>
+      <select>
+        <option disabled value="">Order</option>
+        <option value="asc">Ascending</option>
+        <option value="des">Descending</option>
+      </select><br>
       <main id="lessons" v-for="lessons in lessons">
         <h2>{{lessons.subject}}</h2>
         <span id="icon"><i :class="lessons.icon"></i></span>

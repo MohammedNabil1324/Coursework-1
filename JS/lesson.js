@@ -102,5 +102,8 @@ let app = new Vue({
         icon: "fas fa-brain",
       },
     ],
+    computed: {
+        
+    }
   },
 });

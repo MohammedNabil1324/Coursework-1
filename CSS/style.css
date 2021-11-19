@@ -7,6 +7,11 @@ h2{
     padding-right: 10px;
 }
 
+#cart{
+    margin-left: 46%;
+    font-size: medium;
+}
+
 main{
     display:inline-block;
     padding: 20px;
