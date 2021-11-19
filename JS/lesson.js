@@ -9,7 +9,7 @@ let app = new Vue({
         price: 50,
         space: 5,
         image: "Assets/English.jpg",
-        icon: 'fas fa-pen',
+        icon: "fas fa-pen",
       },
 
       {
@@ -101,9 +101,6 @@ let app = new Vue({
         image: "Assets/Psy.jpg",
         icon: "fas fa-brain",
       },
-    ],
-    computed: {
-        
-    }
+    ]
   },
 });

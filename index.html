@@ -6,48 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coursework 1</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css' integrity='sha512-vZWT27aGmde93huNyIV/K7YsydxaafHLynlJa/4aPy28/R1a/IxewUH4MWo7As5I33hpQ7JS24kwqy/ciIFgvg==' crossorigin='anonymous'/>
     <link
       rel="stylesheet"
-      href="CSS/style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+      integrity="sha512-vZWT27aGmde93huNyIV/K7YsydxaafHLynlJa/4aPy28/R1a/IxewUH4MWo7As5I33hpQ7JS24kwqy/ciIFgvg=="
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
+    <script src="JS/lesson.js"></script>
     <div id="app">
       <header>
         <h1>{{sitename}}</h1>
-        <button id="cart"><i class="fas fa-shopping-cart"></i> Cart</button> <br>
+        <button id="cart" v-on:click="showCheckout">
+          <i class="fas fa-shopping-cart"></i> Cart({{cartCount}})
+        </button>
+        <br />
       </header>
+      <div v-if='showProduct'>
       <select>
         <option disabled value="">Sort</option>
-        <option value="Subject">Subject</option>
-        <option value="Location">Location</option>
-        <option value="Price">Price</option>
-        <option value="Availability">Availability</option>
+        <option v-on:>Subject</option>
+        <option v-on:>Location</option>
+        <option v-on:>Price</option>
+        <option v-on:>Availability</option>
       </select>
       <select>
         <option disabled value="">Order</option>
-        <option value="asc">Ascending</option>
-        <option value="des">Descending</option>
-      </select><br>
+        <option v-on:>Ascending</option>
+        <option v-on:>Descending</option></select
+      ><br />
       <main id="lessons" v-for="lessons in lessons">
         <h2>{{lessons.subject}}</h2>
         <span id="icon"><i :class="lessons.icon"></i></span>
         <p>Location:{{lessons.location}}</p>
         <p>Price:£{{lessons.price}}</p>
-        <p>Space:{{lessons.space}}</p>
-        <img id="img" v-bind:src="lessons.image"><br>
-        <button>Add to Cart</button>
+        <p :id="lessons.id">Space:{{lessons.space}}</p>
+        <img id="img" v-bind:src="lessons.image" /><br />
+        <button :id="lessons.id-1" @click="addLesson">Add to Cart</button>
         <div></div>
+      </div>
+      <div v-else>
+
+      </div>
       </main>
     </div>
-    <script src="JS/lesson.js"></script>
     <script>
       let app1 = new Vue({
         el: "#app",
         data: {
           sitename: app.sitename,
           lessons: app.lessons,
+          cart: [],
+          showProduct: true,
+        },
+        methods: {
+          addLesson: function (e) {
+            this.cart.push(app.lessons[e.target.id].id);
+            this.lessons.space = this.lessons[e.target.id].space - 1;
+            element.innerHTML
+          },
+
+          showCheckout: function() { 
+            this.showProduct = this.showProduct ? false : true },
+        },
+        computed: {
+          cartCount: function () {
+            return this.cart.length || "";
+          },
         },
       });
     </script>
